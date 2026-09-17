@@ -57,8 +57,8 @@ function enumeratePaths(start,end,maxHops=6){
   walk(start,[start],[]);return results;
 }
 
-// A compact, deterministic logistic-regression risk model. Coefficients represent a model
-// trained on synthetic incidents: congestion, interference, cyber anomaly, and node health.
+// A compact, deterministic logistic-regression risk model. Coefficients are calibrated for
+// synthetic scenarios using congestion, interference, cyber anomaly, and node-health features.
 function predictEdgeRisk(edge){
   const congestion=Math.max(0,(80-edge.capacity)/80);
   const interference=(edge.a==="leo27"||edge.b==="leo27")&&state.crisis?1:0;
