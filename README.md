@@ -2,6 +2,10 @@
 
 **AI-powered mission assurance for Europe's sovereign hybrid satellite and 5G networks.**
 
+## Live demo
+
+[Launch OrbitResilience AI](https://orbitresilience-ai.onrender.com)
+
 OrbitResilience AI is a dependency-free web prototype created for the MunichTech EXPO 2026 hackathon. It demonstrates how critical communications can recover from simultaneous satellite, gateway, and terrestrial-network failures while preserving European routing policy and keeping a human accountable for the final action.
 
 ## Why it matters
@@ -53,7 +57,7 @@ Open <http://localhost:8080>.
 
 ## Deploy
 
-The repository is a static site and can be deployed directly to GitHub Pages, Cloudflare Pages, Netlify, Vercel, or any static web server. No build command is required; the publish directory is the repository root.
+The repository is deployed as a Render static site with automatic deployment from `main`. It can also run on GitHub Pages, Cloudflare Pages, Netlify, Vercel, or any static web server. No build command is required; the publish directory is the repository root.
 
 ## Responsible scope
 
