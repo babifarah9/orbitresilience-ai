@@ -1,0 +1,21 @@
+This is OrbitResilience AI: mission assurance for Europe's sovereign hybrid satellite and 5G networks.
+
+When a gateway, satellite link, and terrestrial network fail together, an operations team may face many recovery choices. The fastest route may violate sovereignty requirements, while the safest route may miss the mission's latency target.
+
+The digital twin begins in a healthy state. Eleven nodes are active, Munich's emergency network has full service, and European routing policy is enforced. The topology combines LEO and MEO assets, European gateways, fibre, and private 5G.
+
+Now I will trigger a multi-fault crisis.
+
+Frankfurt goes offline, LEO-27 experiences interference, and Munich fibre degrades. Critical traffic falls to forty-one percent. The engine correlates the incidents, enumerates feasible graph paths, applies sovereignty policy, and independently verifies the recommendation.
+
+The selected route carries traffic from Munich 5G through Vienna, LEO-22, LEO-17, and the Madrid gateway. It delivers forty-one millisecond latency, sixty-nine percent residual capacity, and twenty-six percent modeled risk. All four assurance conditions pass.
+
+The decision is explainable. Route B is rejected because it crosses a non-European gateway, even though its raw performance is competitive. Routes C and D remain sovereign, but exceed the forty-eight millisecond latency limit. OrbitResilience therefore does not simply choose the shortest or highest-capacity path.
+
+Passing the assurance gate creates a recommendation, not an automatic command. A human operator remains accountable for the final reconfiguration.
+
+I will authorize recovery now.
+
+Critical service returns to one hundred percent, the sovereign path stays highlighted, and the system issues a timestamped decision receipt for audit and review.
+
+OrbitResilience AI helps Europe keep critical connectivity operating when infrastructure fails—through interpretable AI, policy-as-code, independent assurance, and human control.
