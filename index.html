@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OrbitResilience AI — sovereign mission assurance for hybrid space and terrestrial networks.">
+  <title>OrbitResilience AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="OrbitResilience AI home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span><strong>ORBIT</strong>RESILIENCE <b>AI</b></span>
+    </a>
+    <div class="top-status"><span class="pulse"></span> DIGITAL TWIN ONLINE <span class="utc" id="utcClock">00:00:00 UTC</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">SOVEREIGN MISSION ASSURANCE</p>
+        <h1>Keep critical networks alive<br><span>when infrastructure fails.</span></h1>
+        <p class="lede">AI-guided recovery for Europe's hybrid satellite and 5G infrastructure—with deterministic policy checks, independent assurance, and human authorization.</p>
+      </div>
+      <div class="hero-actions">
+        <button id="crisisBtn" class="primary"><span>⚡</span> Simulate Crisis</button>
+        <button id="resetBtn" class="secondary">Reset Twin</button>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Network status summary">
+      <article><p>MISSION STATUS</p><strong id="missionStatus" class="ok">HEALTHY</strong><small id="missionSub">All critical services operational</small></article>
+      <article><p>ACTIVE NODES</p><strong id="activeNodes">11 / 11</strong><small>LEO · MEO · terrestrial · 5G</small></article>
+      <article><p>CRITICAL TRAFFIC</p><strong id="criticalTraffic">100%</strong><small>Munich emergency services</small></article>
+      <article><p>SOVEREIGNTY</p><strong class="blue">ENFORCED</strong><small>EU-only routing constraint</small></article>
+    </section>
+
+    <section class="workspace">
+      <article class="panel network-panel">
+        <div class="panel-head">
+          <div><p class="eyebrow">LIVE TOPOLOGY</p><h2>European Hybrid Network</h2></div>
+          <div class="legend"><span><i class="dot green"></i>Healthy</span><span><i class="dot amber"></i>Degraded</span><span><i class="dot red"></i>Failed</span></div>
+        </div>
+        <div class="map" id="networkMap" aria-label="Interactive network topology">
+          <svg id="links" viewBox="0 0 900 490" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <div class="region-label region-space">SPACE SEGMENT</div>
+          <div class="region-label region-ground">GROUND SEGMENT</div>
+          <div class="region-label region-access">CRITICAL ACCESS</div>
+          <div class="node satellite" id="node-leo11" data-node="leo11" style="--x:16%;--y:21%"><span>◈</span><b>LEO-11</b><small>EU Orbital</small></div>
+          <div class="node satellite" id="node-leo17" data-node="leo17" style="--x:39%;--y:13%"><span>◈</span><b>LEO-17</b><small>EU Orbital</small></div>
+          <div class="node satellite" id="node-leo22" data-node="leo22" style="--x:61%;--y:20%"><span>◈</span><b>LEO-22</b><small>EU Orbital</small></div>
+          <div class="node satellite" id="node-leo27" data-node="leo27" style="--x:82%;--y:12%"><span>◈</span><b>LEO-27</b><small>EU Orbital</small></div>
+          <div class="node meo" id="node-meo03" data-node="meo03" style="--x:49%;--y:35%"><span>⬡</span><b>MEO-03</b><small>Secure relay</small></div>
+          <div class="node gateway" id="node-madrid" data-node="madrid" style="--x:14%;--y:63%"><span>⌂</span><b>Madrid</b><small>EU Gateway</small></div>
+          <div class="node gateway" id="node-frankfurt" data-node="frankfurt" style="--x:43%;--y:61%"><span>⌂</span><b>Frankfurt</b><small>EU Gateway</small></div>
+          <div class="node gateway" id="node-vienna" data-node="vienna" style="--x:68%;--y:62%"><span>⌂</span><b>Vienna</b><small>EU Gateway</small></div>
+          <div class="node gateway external" id="node-external" data-node="external" style="--x:87%;--y:68%"><span>⌂</span><b>External</b><small>Non-EU route</small></div>
+          <div class="node terrestrial" id="node-fiber" data-node="fiber" style="--x:38%;--y:84%"><span>≋</span><b>Munich Fibre</b><small>Terrestrial</small></div>
+          <div class="node target" id="node-munich" data-node="munich" style="--x:66%;--y:86%"><span>✚</span><b>Munich 5G</b><small>Emergency network</small></div>
+          <div class="incident-badge hidden" id="incidentBadge">MULTI-FAULT EVENT</div>
+        </div>
+      </article>
+
+      <aside class="panel decision-panel">
+        <div class="panel-head"><div><p class="eyebrow">DECISION ENGINE</p><h2>Recovery Orchestrator</h2></div><span class="agent-tag">AI + RULES</span></div>
+        <div id="idleState" class="state-card idle-state">
+          <div class="radar"><span></span><i></i></div>
+          <h3>Monitoring network</h3>
+          <p>The resilience agent is evaluating telemetry, capacity, security risk, and policy compliance.</p>
+        </div>
+        <div id="analysisState" class="hidden">
+          <div class="alert-box"><span>!</span><div><b>Critical incident detected</b><small>3 simultaneous infrastructure faults</small></div></div>
+          <div class="step active"><i>1</i><div><b>Detect & classify</b><small>Gateway outage · RF interference · fibre degradation</small></div></div>
+          <div class="step" id="step2"><i>2</i><div><b>Enumerate routes</b><small id="routeCountText">Evaluating feasible paths…</small></div></div>
+          <div class="step" id="step3"><i>3</i><div><b>Apply sovereignty policy</b><small>EU jurisdiction and approved infrastructure only</small></div></div>
+          <div class="step" id="step4"><i>4</i><div><b>Assurance verification</b><small>Latency · capacity · risk · service continuity</small></div></div>
+        </div>
+        <div id="recommendState" class="hidden">
+          <div class="route-title"><span>RECOMMENDED RECOVERY</span><b id="selectedRouteName">Route C</b></div>
+          <div class="route-flow" id="routeFlow"></div>
+          <div class="assurance" id="assuranceBox">
+            <div><span class="shield">✓</span><strong>ASSURANCE GATE PASSED</strong></div>
+            <ul id="assuranceChecks"></ul>
+          </div>
+          <button id="authorizeBtn" class="authorize">Authorize Recovery</button>
+          <p class="human-note">Human authorization required before network reconfiguration.</p>
+        </div>
+        <div id="restoredState" class="hidden restored">
+          <div class="success-ring">✓</div><h3>Service restored</h3><p>Sovereign recovery route activated. Critical traffic protected.</p>
+          <div class="receipt"><span>DECISION RECEIPT</span><b id="receiptId">OR-000000</b></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="lower-grid">
+      <article class="panel candidates-panel">
+        <div class="panel-head"><div><p class="eyebrow">EXPLAINABLE OPTIMIZATION</p><h2>Candidate Route Evaluation</h2></div><span id="candidateStamp">BASELINE</span></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>ROUTE</th><th>PATH</th><th>LATENCY</th><th>RISK</th><th>CAPACITY</th><th>EU POLICY</th><th>DECISION</th></tr></thead>
+          <tbody id="candidateRows"><tr class="empty-row"><td colspan="7">Run a crisis simulation to generate and evaluate recovery routes.</td></tr></tbody>
+        </table></div>
+      </article>
+      <article class="panel audit-panel">
+        <div class="panel-head"><div><p class="eyebrow">TRANSPARENT BY DESIGN</p><h2>Decision Audit Trail</h2></div><span>LIVE</span></div>
+        <ol id="auditLog" class="audit-log"><li><time>READY</time><p>Digital twin initialized. Policy pack <b>EU-SOV-01</b> active.</p></li></ol>
+      </article>
+    </section>
+  </main>
+
+  <footer><span>OrbitResilience AI · MunichTech EXPO 2026</span><span>Independent concept — not affiliated with ESA, the EU, or IRIS².</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
