@@ -16,7 +16,7 @@ OrbitResilience AI turns that decision into an explainable, verifiable workflow:
 
 1. Detect and classify correlated infrastructure failures.
 2. Enumerate feasible routes through a hybrid LEO/MEO, gateway, fibre, and private-5G graph.
-3. Estimate route risk with a deterministic logistic model trained conceptually on synthetic incident features.
+3. Estimate route risk with an interpretable logistic model calibrated for synthetic incident scenarios.
 4. Rank alternatives across latency, capacity, risk, and sovereignty.
 5. Independently test the recommendation through an assurance gate.
 6. Require explicit human authorization before reconfiguration.
@@ -68,3 +68,9 @@ OrbitResilience AI is an independent concept and is not affiliated with or endor
 ## License
 
 MIT License. See [LICENSE](LICENSE).
+
+## Submission assets
+
+- [Final Devpost copy](DEVPOST.md)
+- [Timed demo-video plan](DEMO_VIDEO.md)
+- [Narration-only script](VOICEOVER.txt)
