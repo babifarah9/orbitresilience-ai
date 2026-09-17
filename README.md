@@ -68,9 +68,3 @@ OrbitResilience AI is an independent concept and is not affiliated with or endor
 ## License
 
 MIT License. See [LICENSE](LICENSE).
-
-## Submission assets
-
-- [Final Devpost copy](DEVPOST.md)
-- [Timed demo-video plan](DEMO_VIDEO.md)
-- [Narration-only script](VOICEOVER.txt)
